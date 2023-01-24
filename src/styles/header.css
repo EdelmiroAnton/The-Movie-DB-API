@@ -1,0 +1,59 @@
+.header_container {
+  background-color: rgb(208, 162, 252);
+  max-width: 100%;
+  width: auto;
+  display: flex;
+  margin-bottom: 20px;
+
+}
+
+.navbar {
+  margin: auto;
+}
+
+.navbar-collapse ul {
+  margin: auto;
+}
+
+.navbar_items {
+  display: flex;
+}
+
+.navbar_items li {
+  list-style: none;
+}
+
+.links {
+  margin-right: 40px;
+  text-decoration: none;
+  color: rgb(73, 72, 72);
+  transition: all 0.2s ease;
+}
+
+.links:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Toggler Button */
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: auto;
+    margin-left: 20px;
+  }
+
+  .navbar_items {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-collapse ul li{
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+  }
+  
+  .navbar-toggler:hover {
+    cursor: pointer;
+  }
+}
