@@ -10,14 +10,6 @@ function Listado() {
   const [loading, setLoading] = useState();
 
   // // If the token is not in the localStorage, the site will redirect to the path "/"
-  // const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   const token = localStorage.getItem("token");
-  //   if (!token) {
-  //     navigate("/");
-  //   }
-  // }, [navigate]);
 
   const url =
     "https://api.themoviedb.org/3/discover/movie?api_key=8e6c26173742a6f1dd7865c6f7ccf11d&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
@@ -39,7 +31,6 @@ function Listado() {
       setLoading(false);
     }, 1500);
   }, []);
-  console.log(movieData);
 
   let token = sessionStorage.getItem("token");
 

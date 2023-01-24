@@ -7,7 +7,6 @@ import "../styles/detalle.css";
 
 function Detalle() {
   const [movieData, setMovieData] = useState(null);
-  console.log(movieData);
   //To obtain the movie ID
   const token = sessionStorage.getItem("token");
   const query = window.location.search;
