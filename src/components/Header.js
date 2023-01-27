@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { Navbar} from "react-bootstrap";
 import "../styles/header.css";
 
+//Components
+import Buscador from "./Buscador";
+
 function Header() {
   return (
     <header className="header_container">
@@ -26,6 +29,7 @@ function Header() {
             </li>
           </ul>
         </Navbar.Collapse>
+        <Buscador/>
       </Navbar>
     </header>
   );
