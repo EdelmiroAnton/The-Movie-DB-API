@@ -7,6 +7,7 @@ import "../styles/detalle.css";
 
 function Detalle() {
   const [movieData, setMovieData] = useState(null);
+
   //To obtain the movie ID
   const token = sessionStorage.getItem("token");
   const query = window.location.search;
@@ -19,6 +20,7 @@ function Detalle() {
     axios.get(url).then((resp) => setMovieData(resp.data));
   }, [url]);
 
+  console.log(movieData);
   return (
     <>
       {!token && <Navigate to="/" />}

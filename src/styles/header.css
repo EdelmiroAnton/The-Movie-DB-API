@@ -1,42 +1,55 @@
-.header_container {
-  background-color: rgb(208, 162, 252);
-  max-width: 100%;
-  width: auto;
-  display: flex;
-  margin-bottom: 20px;
+@media screen and (max-width: 320px) {
+  .header_container {
+    display: flex;
+    background-color: rgb(208, 162, 252);
+    min-width: 320px;
+    justify-content: center;
+  }
 
+  .navbar {
+    width: auto;
+    margin-left: 10px;
+  }
+
+  .navbar button {
+    margin: 8px 0 auto auto;
+  }
+
+  .navbar-collapse {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .links {
+    text-decoration: none;
+    color: rgb(73, 72, 72);
+    transition: all 0.2s ease;
+  }
+
+  .links:hover {
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .navbar_items {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-toggler:hover {
+    cursor: pointer;
+  }
 }
 
-.navbar {
-  margin: auto;
-}
-
-.navbar-collapse ul {
-  margin: auto;
-}
-
-.navbar_items {
-  display: flex;
-}
-
-.navbar_items li {
-  list-style: none;
-}
-
-.links {
-  margin-right: 40px;
-  text-decoration: none;
-  color: rgb(73, 72, 72);
-  transition: all 0.2s ease;
-}
-
-.links:hover {
-  cursor: pointer;
-  color: #fff;
-}
-
-/* Toggler Button */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .header_container {
+    display: flex;
+    background-color: rgb(208, 162, 252);
+    justify-content: space-between;
+    min-width: 320px;
+  }
   .navbar {
     width: auto;
     margin-left: 20px;
@@ -48,12 +61,70 @@
     flex-direction: column;
   }
 
-  .navbar-collapse ul li{
+  .navbar button {
+    margin: 8px auto auto auto;
+  }
+  .navbar-collapse {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+  .navbar-collapse ul li {
     padding: 0px;
     margin: 10px 0px 0px 0px;
   }
-  
+
   .navbar-toggler:hover {
     cursor: pointer;
+  }
+}
+
+.navbar_items li {
+  list-style: none;
+}
+
+.links {
+  text-decoration: none;
+  color: rgb(73, 72, 72);
+  transition: all 0.2s ease;
+}
+
+.links:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .header_container {
+    background-color: rgb(208, 162, 252);
+    max-width: 100%;
+    width: auto;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-around;
+  }
+
+  .navbar-collapse ul {
+    margin: auto;
+  }
+
+  .navbar_items {
+    display: flex;
+  }
+
+  .navbar_items li {
+    list-style: none;
+  }
+
+  .links {
+    margin-right: 40px;
+    text-decoration: none;
+    color: rgb(73, 72, 72);
+    transition: all 0.2s ease;
+  }
+
+  .links:hover {
+    cursor: pointer;
+    color: #fff;
   }
 }

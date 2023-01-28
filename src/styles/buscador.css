@@ -1,0 +1,22 @@
+@media screen and (max-width: 767px) {
+  .form {
+    display: flex;
+    height: 38px;
+  }
+
+  .formInput {
+    min-width: 100px;
+    margin-left: 10px;
+  }
+
+  .btn {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    display: flex;
+    max-width: 300px;
+  }
+}

@@ -45,10 +45,9 @@ function Login() {
   let token = sessionStorage.getItem("token");
   return (
     <>
-      {token && <Navigate to="/listado"/>}
+      {token && <Navigate to="/listado" />}
 
-
-      <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleSubmit}>
         <div className="container_input">
           <label className="input_email">
             <span className="label_title">Email</span>

@@ -1,4 +1,5 @@
 import { Form, FormControl, Button } from "react-bootstrap";
+import "../styles/buscador.css";
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -8,18 +9,18 @@ const handleSubmit = (e) => {
 
 function Buscador() {
   return (
-    <Form onSubmit={handleSubmit} className="d-flex align-items-center">
+    <Form onSubmit={handleSubmit} className="form mt-3 mb-3">
       <Form.Group>
         <Form.Label className="m-0">
           <FormControl
-            className="me-4"
+            className=" formInput"
             type="text"
             name="keyword"
             placeholder="Search a movie"
           ></FormControl>
         </Form.Label>
       </Form.Group>
-      <Button variant="outline-success" type="submit" className="ml-2">
+      <Button variant="success" type="submit" className="ms-4">
         Search
       </Button>
     </Form>
