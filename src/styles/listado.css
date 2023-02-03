@@ -1,0 +1,23 @@
+.favIcon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin-left: 242px;
+    margin-top: 5px;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    background-color: rgb(212, 207, 207);
+    box-shadow: 0px 0px 10px ;
+
+}
+
+.favIcon:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.favOn{
+    background-color: red;
+}
+
+

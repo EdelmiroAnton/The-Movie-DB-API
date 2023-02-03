@@ -4,6 +4,8 @@ import { Card, Container, Button, Row, Col } from "react-bootstrap";
 import swal from "@sweetalert/with-react";
 import axios from "axios";
 import Loader from "./Loader";
+import FavIcon from "./FavIcon";
+import "../styles/listado.css";
 
 function Listado() {
   const [movieData, setMovieData] = useState([]);
@@ -29,10 +31,11 @@ function Listado() {
       );
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 100);
   }, []);
 
   let token = sessionStorage.getItem("token");
+
 
   return (
     <>
@@ -46,6 +49,7 @@ function Listado() {
             {movieData.map((movie, idx) => (
               <Col key={idx}>
                 <Card style={{ width: "18rem", marginTop: "20px" }}>
+                  <FavIcon id={idx}/>
                   <Card.Img
                     variant="top"
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
