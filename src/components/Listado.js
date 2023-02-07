@@ -7,7 +7,7 @@ import Loader from "./Loader";
 import FavIcon from "./FavIcon";
 import "../styles/listado.css";
 
-function Listado() {
+function Listado({addOrRemoveFavs}) {
   const [movieData, setMovieData] = useState([]);
   const [loading, setLoading] = useState();
 
@@ -36,7 +36,6 @@ function Listado() {
 
   let token = sessionStorage.getItem("token");
 
-
   return (
     <>
       {!token && <Navigate to="/" />}
@@ -48,8 +47,8 @@ function Listado() {
           <Row>
             {movieData.map((movie, idx) => (
               <Col key={idx}>
-                <Card style={{ width: "18rem", marginTop: "20px" }}>
-                  <FavIcon id={idx}/>
+                <Card style={{ width: "18rem", marginTop: "20px" }} id="cardContainer">
+                  <FavIcon id={idx} addOrRemoveFavs={addOrRemoveFavs}/>
                   <Card.Img
                     variant="top"
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
