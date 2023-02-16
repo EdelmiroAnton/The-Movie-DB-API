@@ -16,8 +16,12 @@ function App() {
     const srcImg = parent.querySelector("img").getAttribute("src")
     const movieTitle = parent.querySelector("div").querySelector("div").textContent
     const overview = parent.querySelector("div").querySelector("p").textContent
-    console.log(overview)
+    const movieData = {
+      srcImg, movieTitle, overview
+    }
+    console.log(movieData)
   }
+  
   return (
     <>
       <Header />
