@@ -1,17 +1,20 @@
 import { Link, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Card, Container, Button, Row, Col } from "react-bootstrap";
+import { Card, Container, Row, Col } from "react-bootstrap";
 import swal from "@sweetalert/with-react";
 import axios from "axios";
+
+//Components
+import ButtonMoreInfo from "./ButtonMoreInfo";
 import Loader from "./Loader";
 import FavIcon from "./FavIcon";
+
+//Styles
 import "../styles/listado.css";
 
 function Listado({ addOrRemoveFavs }) {
   const [movieData, setMovieData] = useState([]);
   const [loading, setLoading] = useState();
-
-  // // If the token is not in the sessionStorage, the site will redirect to the path "/"
 
   const url =
     "https://api.themoviedb.org/3/discover/movie?api_key=8e6c26173742a6f1dd7865c6f7ccf11d&language=es-ES&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
@@ -37,6 +40,7 @@ function Listado({ addOrRemoveFavs }) {
   let token = sessionStorage.getItem("token");
 
   return (
+    // // If the token is not in the sessionStorage, the site will redirect to the path "/"
     <>
       {!token && <Navigate to="/" />}
 
@@ -63,12 +67,7 @@ function Listado({ addOrRemoveFavs }) {
                       to={`/detalle?movieID=${movie.id}`}
                       style={{ textDecoration: "none" }}
                     >
-                      <button className="button_moreInfo">
-                        More info
-                        <div class="arrow-wrapper">
-                          <div class="arrow"></div>
-                        </div>
-                      </button>
+                      <ButtonMoreInfo />
                     </Link>
                   </Card.Body>
                 </Card>

@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link, useSearchParams } from "react-router-dom";
 import swal from "@sweetalert/with-react";
+import ButtonMoreInfo from "./ButtonMoreInfo";
 
 function Resultados() {
   const [movieResults, setMovieResults] = useState([]);
@@ -46,7 +47,7 @@ function Resultados() {
                   <Card.Title>{movie.title}</Card.Title>
                   <Card.Text>{movie.overview.substring(0, 75)}...</Card.Text>
                   <Link to={`/detalle?movieID=${movie.id}`}>
-                    <Button variant="primary">Go somewhere</Button>
+                  <ButtonMoreInfo/>
                   </Link>
                 </Card.Body>
               </Card>
