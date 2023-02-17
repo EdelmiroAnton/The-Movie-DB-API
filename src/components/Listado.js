@@ -7,7 +7,7 @@ import Loader from "./Loader";
 import FavIcon from "./FavIcon";
 import "../styles/listado.css";
 
-function Listado({addOrRemoveFavs}) {
+function Listado({ addOrRemoveFavs }) {
   const [movieData, setMovieData] = useState([]);
   const [loading, setLoading] = useState();
 
@@ -47,8 +47,11 @@ function Listado({addOrRemoveFavs}) {
           <Row>
             {movieData.map((movie, idx) => (
               <Col key={idx}>
-                <Card style={{ width: "18rem", marginTop: "20px" }} id="cardContainer">
-                  <FavIcon id={idx} addOrRemoveFavs={addOrRemoveFavs}/>
+                <Card
+                  style={{ width: "18rem", marginTop: "20px" }}
+                  id="cardContainer"
+                >
+                  <FavIcon id={idx} addOrRemoveFavs={addOrRemoveFavs} />
                   <Card.Img
                     variant="top"
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -56,8 +59,16 @@ function Listado({addOrRemoveFavs}) {
                   <Card.Body>
                     <Card.Title>{movie.title}</Card.Title>
                     <Card.Text>{movie.overview.substring(0, 75)}...</Card.Text>
-                    <Link to={`/detalle?movieID=${movie.id}`}>
-                      <Button variant="primary">Go somewhere</Button>
+                    <Link
+                      to={`/detalle?movieID=${movie.id}`}
+                      style={{ textDecoration: "none" }}
+                    >
+                      <button className="button_moreInfo">
+                        More info
+                        <div class="arrow-wrapper">
+                          <div class="arrow"></div>
+                        </div>
+                      </button>
                     </Link>
                   </Card.Body>
                 </Card>
