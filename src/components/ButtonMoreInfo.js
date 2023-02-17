@@ -4,8 +4,8 @@ function ButtonMoreInfo() {
   return (
     <button className="button_moreInfo">
       More info
-      <div class="arrow-wrapper">
-        <div class="arrow"></div>
+      <div className="arrow-wrapper">
+        <div className="arrow"></div>
       </div>
     </button>
   );
