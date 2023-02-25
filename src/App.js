@@ -17,7 +17,8 @@ function App() {
     const movieTitle = parent.querySelector("div").querySelector("div").textContent
     const overview = parent.querySelector("div").querySelector("p").textContent
     const movieData = {
-      srcImg, movieTitle, overview
+      srcImg, movieTitle, overview,
+      id: btn.dataset.movieId
     }
     console.log(movieData)
   }

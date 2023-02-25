@@ -1,7 +1,7 @@
 function FavIcon({ id, addOrRemoveFavs }) {
   return (
     <>
-      <button id={id} className={`favIcon`} onClick={addOrRemoveFavs}>
+      <button id={id} className={`favIcon`} onClick={addOrRemoveFavs} data-movie-id={id}>
         ❤️
       </button>
     </>

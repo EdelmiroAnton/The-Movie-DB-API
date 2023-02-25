@@ -55,7 +55,7 @@ function Listado({ addOrRemoveFavs }) {
                   style={{ width: "18rem", marginTop: "20px" }}
                   id="cardContainer"
                 >
-                  <FavIcon id={idx} addOrRemoveFavs={addOrRemoveFavs} />
+                  <FavIcon id={movie.id} addOrRemoveFavs={addOrRemoveFavs} />
                   <Card.Img
                     variant="top"
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
