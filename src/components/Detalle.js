@@ -20,7 +20,6 @@ function Detalle() {
     axios.get(url).then((resp) => setMovieData(resp.data));
   }, [url]);
 
-  console.log(movieData);
   return (
     <>
       {!token && <Navigate to="/" />}
