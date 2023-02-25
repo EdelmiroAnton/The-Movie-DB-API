@@ -52,12 +52,10 @@ function Login() {
           <label className="input_email">
             <span className="label_title">Email</span>
             <FormControl type="text" name="email"></FormControl>
-            {/* <input type="text" name="email" /> */}
           </label>
           <label className="input_password">
             <span className="label_title">Password</span>
             <FormControl type="password" name="password"></FormControl>
-            {/* <input type="password" name="password" /> */}
           </label>
         </div>
         <div className="container_button">

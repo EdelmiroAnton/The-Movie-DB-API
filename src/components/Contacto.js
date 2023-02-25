@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 function Contacto() {
   const navigate = useNavigate();
-  // If the token is not in the localStorage, the site will redirect to the path "/"
+  
+  // If the token is not in the sessionStorage, the site will redirect to the path "/"
   useEffect(() => {
     const token = sessionStorage.getItem("token");
     if (!token) {
