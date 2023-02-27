@@ -26,6 +26,8 @@ function App() {
       .querySelector("div")
       .querySelector("div").textContent;
     const overview = parent.querySelector("div").querySelector("p").textContent;
+
+    // Object with all the previuos informatio
     const movieData = {
       srcImg,
       movieTitle,
@@ -33,6 +35,7 @@ function App() {
       id: btn.dataset.movieId,
     };
 
+    // Logic to add favs into the array and do not repeat movie if the user clicks more than once the fav button 
     const uniqueMovie = tempArrayOfMovies.find(
       (movie) => movie.id === movieData.id
     );
@@ -40,6 +43,7 @@ function App() {
       tempArrayOfMovies.push(movieData);
       localStorage.setItem("favs", JSON.stringify(tempArrayOfMovies));
     }
+
   };
 
   return (
