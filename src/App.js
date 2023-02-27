@@ -32,9 +32,14 @@ function App() {
       overview,
       id: btn.dataset.movieId,
     };
-    tempArrayOfMovies.push(movieData);
-    console.log(tempArrayOfMovies);
-    localStorage.setItem("favs", JSON.stringify(tempArrayOfMovies));
+
+    const uniqueMovie = tempArrayOfMovies.find(
+      (movie) => movie.id === movieData.id
+    );
+    if (uniqueMovie === undefined) {
+      tempArrayOfMovies.push(movieData);
+      localStorage.setItem("favs", JSON.stringify(tempArrayOfMovies));
+    }
   };
 
   return (
