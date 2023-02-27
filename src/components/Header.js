@@ -27,6 +27,11 @@ function Header() {
                 Contacto
               </Link>
             </li>
+            <li>
+              <Link to="/favorites" className="links">
+                Favorites
+              </Link>
+            </li>
           </ul>
         </Navbar.Collapse>
       </Navbar>
