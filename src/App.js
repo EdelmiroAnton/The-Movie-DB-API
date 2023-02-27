@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Resultados from "./components/Resultados";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import Favorites from "./components/Favorites";
 
 function App() {
   const addOrRemoveFavs = (e) => {
@@ -58,6 +59,7 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/detalle" element={<Detalle />} />
         <Route path="/resultados" element={<Resultados />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
       <Footer />
     </>
