@@ -1,0 +1,16 @@
+.textEmptyFavs {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(162, 76, 241);
+}
+
+.goBackLink {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(73, 72, 72);
+}
+
+.goBackLink:hover {
+  color: black;
+}

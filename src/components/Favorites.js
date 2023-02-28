@@ -6,6 +6,9 @@ import swal from "sweetalert";
 //Components
 import ButtonMoreInfo from "./ButtonMoreInfo";
 
+//Styles
+import "../styles/favorites.css"
+
 function Favorites() {
   const [favorites, setFavorites] = useState([]);
 
@@ -28,6 +31,12 @@ function Favorites() {
   };
   return (
     <>
+    {favorites.length === 0 && 
+    <>
+    <h1 className="textEmptyFavs">📽️ Ups, your Fav List is empty 📽️</h1>
+    <Link to={"/listado"} className="goBackLink">Go back</Link>
+    </>
+    }
       <Container style={{ display: "flex" }}>
         <Row>
           {favorites.map((movie, idx) => (
