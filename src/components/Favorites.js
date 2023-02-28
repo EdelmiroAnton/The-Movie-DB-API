@@ -12,12 +12,20 @@ function Favorites() {
   useEffect(() => {
     const favsItems = localStorage.getItem("favs");
     if (favsItems !== null) {
-      setFavorites(JSON.parse(favsItems))
-    } else{
-        swal("FAVS IS EMPTY")
+      setFavorites(JSON.parse(favsItems));
+    } else {
+      swal("FAVS IS EMPTY");
     }
   }, []);
 
+  const removeFavs = (e) => {
+    const btnRemove = e.currentTarget;
+    const movieIdDataset = btnRemove.dataset.movieId;
+
+    const newArr = favorites.filter((movie) => movie.id !== movieIdDataset);
+    setFavorites(newArr);
+    localStorage.setItem("favs", JSON.stringify(newArr))
+  };
   return (
     <>
       <Container style={{ display: "flex" }}>
@@ -28,6 +36,13 @@ function Favorites() {
                 style={{ width: "18rem", marginTop: "20px" }}
                 id="cardContainer"
               >
+                <button
+                  className={`favIcon`}
+                  onClick={removeFavs}
+                  data-movie-id={movie.id}
+                >
+                  ❌
+                </button>
                 <Card.Img variant="top" src={movie.srcImg} />
                 <Card.Body>
                   <Card.Title>{movie.title}</Card.Title>
