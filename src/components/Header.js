@@ -5,7 +5,7 @@ import "../styles/header.css";
 //Components
 import Buscador from "./Buscador";
 
-function Header() {
+function Header({ favorites }) {
   return (
     <header className="header_container">
       <Navbar expand="md">
@@ -29,7 +29,7 @@ function Header() {
             </li>
             <li>
               <Link to="/favorites" className="links">
-                Favorites
+                Favorites ({favorites.length})
               </Link>
             </li>
           </ul>

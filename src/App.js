@@ -8,8 +8,11 @@ import Resultados from "./components/Resultados";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Favorites from "./components/Favorites";
+import { useState } from "react";
 
 function App() {
+  const [favorites, setFavorites] = useState([]);
+
   const addOrRemoveFavs = (e) => {
     const favsItems = localStorage.getItem("favs");
     let tempArrayOfMovies;
@@ -18,6 +21,7 @@ function App() {
       tempArrayOfMovies = [];
     } else {
       tempArrayOfMovies = JSON.parse(favsItems);
+      setFavorites(tempArrayOfMovies);
     }
 
     // Get info about the movies with the btn event
@@ -49,7 +53,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header favorites={favorites} />
       <Routes>
         <Route path="/" element={<Login />} />
         <Route
@@ -59,7 +63,12 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/detalle" element={<Detalle />} />
         <Route path="/resultados" element={<Resultados />} />
-        <Route path="/favorites" element={<Favorites />} />
+        <Route
+          path="/favorites"
+          element={
+            <Favorites favorites={favorites} setFavorites={setFavorites} />
+          }
+        />
       </Routes>
       <Footer />
     </>

@@ -7,11 +7,9 @@ import swal from "sweetalert";
 import ButtonMoreInfo from "./ButtonMoreInfo";
 
 //Styles
-import "../styles/favorites.css"
+import "../styles/favorites.css";
 
-function Favorites() {
-  const [favorites, setFavorites] = useState([]);
-
+function Favorites({ favorites, setFavorites }) {
   useEffect(() => {
     const favsItems = localStorage.getItem("favs");
     if (favsItems !== null) {
@@ -19,7 +17,7 @@ function Favorites() {
     } else {
       swal("FAVS IS EMPTY");
     }
-  }, []);
+  }, [setFavorites]);
 
   const removeFavs = (e) => {
     const btnRemove = e.currentTarget;
@@ -27,16 +25,18 @@ function Favorites() {
 
     const newArr = favorites.filter((movie) => movie.id !== movieIdDataset);
     setFavorites(newArr);
-    localStorage.setItem("favs", JSON.stringify(newArr))
+    localStorage.setItem("favs", JSON.stringify(newArr));
   };
   return (
     <>
-    {favorites.length === 0 && 
-    <>
-    <h1 className="textEmptyFavs">📽️ Ups, your Fav List is empty 📽️</h1>
-    <Link to={"/listado"} className="goBackLink">Go back</Link>
-    </>
-    }
+      {favorites.length === 0 && (
+        <>
+          <h1 className="textEmptyFavs">📽️ Ups, your Fav List is empty 📽️</h1>
+          <Link to={"/listado"} className="goBackLink">
+            Go back
+          </Link>
+        </>
+      )}
       <Container style={{ display: "flex" }}>
         <Row>
           {favorites.map((movie, idx) => (
