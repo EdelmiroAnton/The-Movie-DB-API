@@ -3,7 +3,7 @@ import swal from "@sweetalert/with-react";
 import "../styles/buscador.css";
 import { useNavigate } from "react-router-dom";
 
-function Buscador() {
+function Search() {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -11,9 +11,9 @@ function Buscador() {
     const keyword = e.target.keyword.value.trim();
 
     if (keyword.length === 0) {
-      swal(<h2>Por favor, escriba el nombre de una pelicula</h2>);
+      swal(<h2>Please, type something</h2>);
     } else if (keyword.length < 3) {
-      swal(<h2>No hay una pelicula con un nombre tan corto :D</h2>);
+      swal(<h2>There is no movie with a name too short :D</h2>);
     } else {
       e.target.keyword.value = "";
       navigate(`/resultados?keyword=${keyword}`);
@@ -37,4 +37,4 @@ function Buscador() {
     </Form>
   );
 }
-export default Buscador;
+export default Search;

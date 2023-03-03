@@ -3,7 +3,7 @@ import { Navbar } from "react-bootstrap";
 import "../styles/header.css";
 
 //Components
-import Buscador from "./Buscador";
+import Search from "./Search";
 
 function Header({ favorites }) {
   return (
@@ -35,7 +35,7 @@ function Header({ favorites }) {
           </ul>
         </Navbar.Collapse>
       </Navbar>
-      <Buscador />
+      <Search />
     </header>
   );
 }
