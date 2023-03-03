@@ -10,7 +10,7 @@ function Contact() {
     if (!token) {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
   return (
     <>
       <h1>CONTACT</h1>
