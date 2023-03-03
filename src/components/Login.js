@@ -1,6 +1,6 @@
 import axios from "axios";
 import swal from "@sweetalert/with-react";
-import { useNavigate, Navigate } from "react-router-dom"; // en reemplazo de useHistory
+import { useNavigate, Navigate } from "react-router-dom";
 import { Button, FormControl } from "react-bootstrap";
 import "../styles/login.css";
 
@@ -13,7 +13,7 @@ function Login() {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const regexEmail =
-      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+      /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
 
     //Form Validations
     if (email === "" || password === "") {
@@ -38,14 +38,14 @@ function Login() {
     axios.post(URL, { email, password }).then((resp) => {
       const token = resp.data.token;
       sessionStorage.setItem("token", token);
-      navigate("/listado");
+      navigate("/movies");
     });
   };
 
   let token = sessionStorage.getItem("token");
   return (
     <>
-      {token && <Navigate to="/listado" />}
+      {token && <Navigate to="/movies" />}
 
       <form onSubmit={handleSubmit}>
         <div className="container_input">
