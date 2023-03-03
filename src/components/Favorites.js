@@ -8,6 +8,7 @@ import ButtonMoreInfo from "./ButtonMoreInfo";
 
 //Styles
 import "../styles/favorites.css";
+import RemoveFavs from "./RemoveFavs";
 
 function Favorites({ favorites, setFavorites }) {
   useEffect(() => {
@@ -43,13 +44,7 @@ function Favorites({ favorites, setFavorites }) {
                 style={{ width: "18rem", marginTop: "20px" }}
                 id="cardContainer"
               >
-                <button
-                  className={`favIcon`}
-                  onClick={removeFavs}
-                  data-movie-id={movie.id}
-                >
-                  ❌
-                </button>
+                <RemoveFavs removeFavs={removeFavs} id={movie.id}/>
                 <Card.Img variant="top" src={movie.srcImg} />
                 <Card.Body>
                   <Card.Title>{movie.title}</Card.Title>
