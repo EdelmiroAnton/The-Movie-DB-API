@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 //Components
 import ButtonMoreInfo from "./ButtonMoreInfo";
+import RemoveFavs from "./RemoveFavs";
 
 //Styles
 import "../styles/favorites.css";
-import RemoveFavs from "./RemoveFavs";
 
 function Favorites({ favorites, setFavorites }) {
   useEffect(() => {
