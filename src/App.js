@@ -1,3 +1,4 @@
+//Components
 import Login from "./components/Login";
 import Listado from "./components/Listado";
 import Contacto from "./components/Contacto";
@@ -5,10 +6,14 @@ import Detalle from "./components/Detalle";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Resultados from "./components/Resultados";
-import { Routes, Route } from "react-router-dom";
-import "./App.css";
 import Favorites from "./components/Favorites";
+
+//React
+import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
+
+//Styles
+import "./App.css";
 
 function App() {
   const [favorites, setFavorites] = useState([]);
