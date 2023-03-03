@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import swal from "sweetalert";
 
 //Components
 import ButtonMoreInfo from "./ButtonMoreInfo";
@@ -14,8 +13,6 @@ function Favorites({ favorites, setFavorites }) {
     const favsItems = localStorage.getItem("favs");
     if (favsItems !== null) {
       setFavorites(JSON.parse(favsItems));
-    } else {
-      swal("FAVS IS EMPTY");
     }
   }, [setFavorites]);
 
