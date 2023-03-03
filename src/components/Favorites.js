@@ -31,7 +31,7 @@ function Favorites({ favorites, setFavorites }) {
       {favorites.length === 0 && (
         <>
           <h1 className="textEmptyFavs">📽️ Ups, your Fav List is empty 📽️</h1>
-          <Link to={"/listado"} className="goBackLink">
+          <Link to={"/movies"} className="goBackLink">
             Go back
           </Link>
         </>
