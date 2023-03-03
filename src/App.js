@@ -1,11 +1,11 @@
 //Components
 import Login from "./components/Login";
-import Listado from "./components/Listado";
-import Contacto from "./components/Contacto";
-import Detalle from "./components/Detalle";
+import ListOfMovies from "./components/ListOfMovies";
+import Contact from "./components/Contact";
+import Detail from "./components/Detail";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Resultados from "./components/Resultados";
+import Results from "./components/Results";
 import Favorites from "./components/Favorites";
 
 //React
@@ -62,12 +62,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route
-          path="/listado"
-          element={<Listado addOrRemoveFavs={addOrRemoveFavs} />}
+          path="/movies"
+          element={<ListOfMovies addOrRemoveFavs={addOrRemoveFavs} />}
         />
-        <Route path="/contacto" element={<Contacto />} />
-        <Route path="/detalle" element={<Detalle />} />
-        <Route path="/resultados" element={<Resultados />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/detail" element={<Detail />} />
+        <Route path="/results" element={<Results />} />
         <Route
           path="/favorites"
           element={

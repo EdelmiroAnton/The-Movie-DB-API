@@ -18,13 +18,13 @@ function Header({ favorites }) {
               </Link>
             </li>
             <li>
-              <Link to="/listado" className="links">
-                Listado
+              <Link to="/movies" className="links">
+                Movies
               </Link>
             </li>
             <li>
-              <Link to="/contacto" className="links">
-                Contacto
+              <Link to="/contact" className="links">
+                Contact
               </Link>
             </li>
             <li>

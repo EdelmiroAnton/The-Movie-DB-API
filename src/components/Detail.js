@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 import { Es, Gb } from "react-flags-select";
 import "../styles/detalle.css";
 
-function Detalle() {
+function Detail() {
   const [movieData, setMovieData] = useState(null);
 
   //To obtain the movie ID
@@ -72,4 +72,4 @@ function Detalle() {
   );
 }
 
-export default Detalle;
+export default Detail;

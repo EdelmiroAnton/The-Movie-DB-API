@@ -16,7 +16,7 @@ function Search() {
       swal(<h2>There is no movie with a name too short :D</h2>);
     } else {
       e.target.keyword.value = "";
-      navigate(`/resultados?keyword=${keyword}`);
+      navigate(`/results?keyword=${keyword}`);
     }
   };
   return (

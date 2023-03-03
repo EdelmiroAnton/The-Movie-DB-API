@@ -12,7 +12,7 @@ import FavIcon from "./FavIcon";
 //Styles
 import "../styles/listado.css";
 
-function Listado({ addOrRemoveFavs }) {
+function ListOfMovies({ addOrRemoveFavs }) {
   const [movieData, setMovieData] = useState([]);
   const [loading, setLoading] = useState();
 
@@ -64,7 +64,7 @@ function Listado({ addOrRemoveFavs }) {
                     <Card.Title>{movie.title}</Card.Title>
                     <Card.Text>{movie.overview.substring(0, 75)}...</Card.Text>
                     <Link
-                      to={`/detalle?movieID=${movie.id}`}
+                      to={`/detail?movieID=${movie.id}`}
                       style={{ textDecoration: "none" }}
                     >
                       <ButtonMoreInfo />
@@ -80,4 +80,4 @@ function Listado({ addOrRemoveFavs }) {
   );
 }
 
-export default Listado;
+export default ListOfMovies;

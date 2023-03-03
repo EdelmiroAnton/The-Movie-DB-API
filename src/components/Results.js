@@ -5,7 +5,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import swal from "@sweetalert/with-react";
 import ButtonMoreInfo from "./ButtonMoreInfo";
 
-function Resultados() {
+function Results() {
   const [movieResults, setMovieResults] = useState([]);
 
   //query string from URL
@@ -20,20 +20,20 @@ function Resultados() {
         const moviesArray = resp.data.results;
         setMovieResults(moviesArray);
         if (moviesArray.length === 0) {
-          swal(<h3>Su busqueda no arrojó ningun resultado</h3>);
+          swal(<h3>Your search has no results</h3>);
         }
       })
       .catch((error) => {
-        swal("ERROR AL CARGAR LA BUSQUEDA");
+        swal("SEARCH ERROR");
       });
   }, [keyword]);
 
   return (
     <>
       <h2>
-        Resultados de la búsqueda: <em>{keyword}</em>
+       Your search: <em>{keyword}</em>
       </h2>
-      {movieResults.length === 0 && <h3>No hay resultados en tu busqueda</h3>}
+      {movieResults.length === 0 && <h3>Sorry, there are no movies for your search</h3>}
       <Container style={{ display: "flex" }}>
         <Row>
           {movieResults.map((movie, idx) => (
@@ -46,7 +46,7 @@ function Resultados() {
                 <Card.Body>
                   <Card.Title>{movie.title}</Card.Title>
                   <Card.Text>{movie.overview.substring(0, 75)}...</Card.Text>
-                  <Link to={`/detalle?movieID=${movie.id}`}>
+                  <Link to={`/detail?movieID=${movie.id}`}>
                   <ButtonMoreInfo/>
                   </Link>
                 </Card.Body>
@@ -58,4 +58,4 @@ function Resultados() {
     </>
   );
 }
-export default Resultados;
+export default Results;
