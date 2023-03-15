@@ -18,7 +18,7 @@ import "./App.css";
 function App() {
   const [favorites, setFavorites] = useState([]);
 
-  const addOrRemoveFavs = (e) => {
+  const addFavs = (e) => {
     const favsItems = localStorage.getItem("favs");
     let tempArrayOfMovies;
 
@@ -63,11 +63,11 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route
           path="/movies"
-          element={<ListOfMovies addOrRemoveFavs={addOrRemoveFavs} />}
+          element={<ListOfMovies addFavs={addFavs} />}
         />
         <Route path="/contact" element={<Contact />} />
         <Route path="/detail" element={<Detail />} />
-        <Route path="/results" element={<Results addOrRemoveFavs={addOrRemoveFavs} />} />
+        <Route path="/results" element={<Results addFavs={addFavs} />} />
         <Route
           path="/favorites"
           element={

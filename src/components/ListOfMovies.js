@@ -12,7 +12,7 @@ import FavIcon from "./FavIcon";
 //Styles
 import "../styles/listado.css";
 
-function ListOfMovies({ addOrRemoveFavs }) {
+function ListOfMovies({ addFavs }) {
   const [movieData, setMovieData] = useState([]);
   const [loading, setLoading] = useState();
 
@@ -55,7 +55,7 @@ function ListOfMovies({ addOrRemoveFavs }) {
                   style={{ width: "18rem", marginTop: "20px" }}
                   id="cardContainer"
                 >
-                  <FavIcon id={movie.id} addOrRemoveFavs={addOrRemoveFavs} />
+                  <FavIcon id={movie.id} addFavs={addFavs} />
                   <Card.Img
                     variant="top"
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

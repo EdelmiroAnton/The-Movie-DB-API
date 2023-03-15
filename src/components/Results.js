@@ -8,7 +8,7 @@ import swal from "@sweetalert/with-react";
 import ButtonMoreInfo from "./ButtonMoreInfo";
 import FavIcon from "./FavIcon";
 
-function Results({ addOrRemoveFavs }) {
+function Results({ addFavs }) {
   const [movieResults, setMovieResults] = useState([]);
 
   //query string from URL
@@ -48,7 +48,7 @@ function Results({ addOrRemoveFavs }) {
                   variant="top"
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 />
-                <FavIcon id={movie.id} addOrRemoveFavs={addOrRemoveFavs} />
+                <FavIcon id={movie.id} addFavs={addFavs} />
                 <Card.Body>
                   <Card.Title>{movie.title}</Card.Title>
                   <Card.Text>{movie.overview.substring(0, 75)}...</Card.Text>
