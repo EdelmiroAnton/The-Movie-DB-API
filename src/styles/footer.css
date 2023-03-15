@@ -1,0 +1,20 @@
+.footer {
+  background-color: rgb(243, 217, 100);
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.footer_text {
+  text-align: center;
+}
+
+.githubLink {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.githubLink:hover {
+  color: black;
+  font-weight: bold;
+}
