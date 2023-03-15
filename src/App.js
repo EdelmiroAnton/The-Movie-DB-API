@@ -67,7 +67,7 @@ function App() {
         />
         <Route path="/contact" element={<Contact />} />
         <Route path="/detail" element={<Detail />} />
-        <Route path="/results" element={<Results />} />
+        <Route path="/results" element={<Results addOrRemoveFavs={addOrRemoveFavs} />} />
         <Route
           path="/favorites"
           element={

@@ -3,9 +3,12 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link, useSearchParams } from "react-router-dom";
 import swal from "@sweetalert/with-react";
-import ButtonMoreInfo from "./ButtonMoreInfo";
 
-function Results() {
+//Components
+import ButtonMoreInfo from "./ButtonMoreInfo";
+import FavIcon from "./FavIcon";
+
+function Results({ addOrRemoveFavs }) {
   const [movieResults, setMovieResults] = useState([]);
 
   //query string from URL
@@ -31,9 +34,11 @@ function Results() {
   return (
     <>
       <h2>
-       Your search: <em>{keyword}</em>
+        Your search: <em>{keyword}</em>
       </h2>
-      {movieResults.length === 0 && <h3>Sorry, there are no movies for your search</h3>}
+      {movieResults.length === 0 && (
+        <h3>Sorry, there are no movies for your search</h3>
+      )}
       <Container style={{ display: "flex" }}>
         <Row>
           {movieResults.map((movie, idx) => (
@@ -43,11 +48,12 @@ function Results() {
                   variant="top"
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 />
+                <FavIcon id={movie.id} addOrRemoveFavs={addOrRemoveFavs} />
                 <Card.Body>
                   <Card.Title>{movie.title}</Card.Title>
                   <Card.Text>{movie.overview.substring(0, 75)}...</Card.Text>
                   <Link to={`/detail?movieID=${movie.id}`}>
-                  <ButtonMoreInfo/>
+                    <ButtonMoreInfo />
                   </Link>
                 </Card.Body>
               </Card>
