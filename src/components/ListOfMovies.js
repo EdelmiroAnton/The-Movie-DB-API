@@ -52,7 +52,12 @@ function ListOfMovies({ addFavs }) {
             {movieData.map((movie, idx) => (
               <Col key={idx}>
                 <Card
-                  style={{ width: "18rem", marginTop: "20px" }}
+                  style={{
+                    width: "18rem",
+                    marginTop: "20px",
+                    boxShadow: "0px 0px 6px",
+                    border: "none",
+                  }}
                   id="cardContainer"
                 >
                   <FavIcon id={movie.id} addFavs={addFavs} />

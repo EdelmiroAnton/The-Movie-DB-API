@@ -43,7 +43,14 @@ function Results({ addFavs }) {
         <Row>
           {movieResults.map((movie, idx) => (
             <Col key={idx}>
-              <Card style={{ width: "18rem", marginTop: "20px" }}>
+              <Card
+                style={{
+                  width: "18rem",
+                  marginTop: "20px",
+                  boxShadow: "0px 0px 6px",
+                  border: "none",
+                }}
+              >
                 <Card.Img
                   variant="top"
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
