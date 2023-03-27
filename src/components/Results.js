@@ -56,7 +56,7 @@ function Results({ addFavs }) {
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 />
                 <FavIcon id={movie.id} addFavs={addFavs} />
-                <Card.Body>
+                <Card.Body style={{ backgroundColor: "#EBE8E7" }}>
                   <Card.Title>{movie.title}</Card.Title>
                   <Card.Text>{movie.overview.substring(0, 75)}...</Card.Text>
                   <Link to={`/detail?movieID=${movie.id}`}>

@@ -41,12 +41,17 @@ function Favorites({ favorites, setFavorites }) {
           {favorites.map((movie, idx) => (
             <Col key={idx}>
               <Card
-                style={{ width: "18rem", marginTop: "20px" }}
+                style={{
+                  width: "18rem",
+                  marginTop: "20px",
+                  boxShadow: "0px 0px 6px",
+                  border: "none",
+                }}
                 id="cardContainer"
               >
-                <RemoveFavs removeFavs={removeFavs} id={movie.id}/>
+                <RemoveFavs removeFavs={removeFavs} id={movie.id} />
                 <Card.Img variant="top" src={movie.srcImg} />
-                <Card.Body>
+                <Card.Body style={{ backgroundColor: "#EBE8E7" }}>
                   <Card.Title>{movie.title}</Card.Title>
                   <Card.Text>{movie.overview.substring(0, 75)}...</Card.Text>
                   <Link
