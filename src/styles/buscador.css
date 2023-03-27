@@ -11,6 +11,8 @@
 
   .btn {
     margin-right: 10px;
+    background-color: #321325 !important;
+    border: none !important;
   }
 }
 
@@ -18,5 +20,11 @@
   .form {
     display: flex;
     max-width: 300px;
+  }
+
+  .btn {
+    /* margin-right: 10px; */
+    background-color: #321325 !important;
+    border: none !important;
   }
 }

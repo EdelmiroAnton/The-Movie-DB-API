@@ -31,7 +31,7 @@ function Search() {
           ></FormControl>
         </Form.Label>
       </Form.Group>
-      <Button variant="success" type="submit" className="ms-4">
+      <Button type="submit" className="ms-4">
         Search
       </Button>
     </Form>
