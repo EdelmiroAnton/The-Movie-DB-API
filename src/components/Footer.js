@@ -4,8 +4,8 @@ function Footer() {
   return (
     <>
       <div className="footer">
-        <h3 className="footer_text">
-          Copyright 2023 -{" "}
+        <h3>
+          Copyright 2023 -
           <a
             href="https://github.com/EdelmiroAnton/"
             target={"_blank"}
