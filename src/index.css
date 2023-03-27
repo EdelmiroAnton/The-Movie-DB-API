@@ -4,7 +4,8 @@ html {
 }
 
 body {
+  background-color: whitesmoke;
   font-family: "Poppins", sans-serif;
   font-weight: 900;
-  margin: 0 auto 150px; 
+  margin: 0 auto 150px;
 }
