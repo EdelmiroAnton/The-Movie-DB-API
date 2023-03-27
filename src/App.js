@@ -4,7 +4,7 @@ import ListOfMovies from "./components/ListOfMovies";
 import Contact from "./components/Contact";
 import Detail from "./components/Detail";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+  import Footer from "./components/Footer";
 import Results from "./components/Results";
 import Favorites from "./components/Favorites";
 

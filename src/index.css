@@ -1,4 +1,10 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
+  margin: 0 auto 150px; 
 }
