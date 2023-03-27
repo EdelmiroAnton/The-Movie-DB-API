@@ -1,7 +1,7 @@
 @media screen and (max-width: 320px) {
   .header_container {
     display: flex;
-    background-color: rgb(208, 162, 252);
+    background-color: #5f0f40;
     min-width: 320px;
     justify-content: center;
   }
@@ -23,13 +23,13 @@
 
   .links {
     text-decoration: none;
-    color: rgb(73, 72, 72);
+    color: #fff;
     transition: all 0.2s ease;
   }
 
   .links:hover {
     cursor: pointer;
-    color: #fff;
+    color: #ffffffa8;
   }
 
   .navbar_items {
@@ -46,7 +46,7 @@
 @media screen and (max-width: 767px) {
   .header_container {
     display: flex;
-    background-color: rgb(208, 162, 252);
+    background-color: #5f0f40;
     justify-content: space-between;
     min-width: 320px;
   }
@@ -85,18 +85,18 @@
 
 .links {
   text-decoration: none;
-  color: rgb(73, 72, 72);
+  color: #fff;
   transition: all 0.2s ease;
 }
 
 .links:hover {
   cursor: pointer;
-  color: #fff;
+  color: #ffffffa8;
 }
 
 @media screen and (min-width: 768px) {
   .header_container {
-    background-color: rgb(208, 162, 252);
+    background-color: #5f0f40;
     max-width: 100%;
     width: auto;
     display: flex;
@@ -119,12 +119,12 @@
   .links {
     margin-right: 40px;
     text-decoration: none;
-    color: rgb(73, 72, 72);
+    color: #fff;
     transition: all 0.2s ease;
   }
 
   .links:hover {
     cursor: pointer;
-    color: #fff;
+    color: #ffffffa8;
   }
 }
