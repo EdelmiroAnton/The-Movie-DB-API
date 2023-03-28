@@ -60,7 +60,6 @@ function Login() {
         </div>
         <div className="container_button">
           <Button
-            variant="outline-success"
             type="submit"
             className="button_logIn"
           >
