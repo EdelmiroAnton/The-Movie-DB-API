@@ -8,6 +8,9 @@ import swal from "@sweetalert/with-react";
 import ButtonMoreInfo from "./ButtonMoreInfo";
 import FavIcon from "./FavIcon";
 
+//Styles
+import "../styles/results.css";
+
 function Results({ addFavs }) {
   const [movieResults, setMovieResults] = useState([]);
 
@@ -33,7 +36,7 @@ function Results({ addFavs }) {
 
   return (
     <>
-      <Container style={{ display: "block" }}>
+      <Container>
         <h2>
           Your search: <em>{keyword}</em>
         </h2>
