@@ -32,3 +32,44 @@
     font-weight: bold;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .container_input {
+    display: block;
+    max-width: 350px;
+    margin: 20px auto 0 auto;
+  }
+
+  .label_title {
+    font-size: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .input_email {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  .formControl_email{
+    margin-left: 52px;
+    margin-right: 10px;
+  }
+
+  .input_password {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  .container_button {
+    display: flex;
+    justify-content: center;
+  }
+  .button_logIn {
+    margin-top: 15px;
+  }
+
+  .button_logIn:hover {
+    font-weight: bold;
+  }
+}

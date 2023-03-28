@@ -51,7 +51,7 @@ function Login() {
         <div className="container_input">
           <label className="input_email">
             <span className="label_title">Email</span>
-            <FormControl type="text" name="email"></FormControl>
+            <FormControl type="text" name="email" className="formControl_email"></FormControl>
           </label>
           <label className="input_password">
             <span className="label_title">Password</span>
