@@ -1,32 +1,34 @@
-.container_input {
-  margin: 20px auto 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
-.label_title {
-  font-size: 25px;
-  margin-right: 10px;
-}
-.input_email {
-  display: flex;
-  margin-right: 15px;
-}
-
-.input_password {
-  display: flex;
-  margin-right: 15px;
-}
-
-.container_button{
+@media screen and (min-width: 600px) {
+  .container_input {
+    margin: 20px auto 0 auto;
     display: flex;
     justify-content: center;
-}
-.button_logIn{
+  }
+
+  .label_title {
+    font-size: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .input_email {
+    display: flex;
+    margin-right: 15px;
+  }
+
+  .input_password {
+    display: flex;
+    margin-right: 15px;
+  }
+
+  .container_button {
+    display: flex;
+    justify-content: center;
+  }
+  .button_logIn {
     margin-top: 15px;
-}
+  }
 
-.button_logIn:hover{
-  font-weight:bold ;
+  .button_logIn:hover {
+    font-weight: bold;
+  }
 }
-
