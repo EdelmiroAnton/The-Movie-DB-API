@@ -55,7 +55,7 @@ function Favorites({ favorites, setFavorites }) {
                   <Card.Title>{movie.title}</Card.Title>
                   <Card.Text>{movie.overview.substring(0, 75)}...</Card.Text>
                   <Link
-                    to={`/detalle?movieID=${movie.id}`}
+                    to={`/detail?movieID=${movie.id}`}
                     style={{ textDecoration: "none" }}
                   >
                     <ButtonMoreInfo />
