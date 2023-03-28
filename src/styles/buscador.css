@@ -14,6 +14,10 @@
     background-color: #321325 !important;
     border: none !important;
   }
+
+  .btn:hover {
+    font-weight: bold;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -26,5 +30,8 @@
     /* margin-right: 10px; */
     background-color: #321325 !important;
     border: none !important;
+  }
+  .btn:hover {
+    font-weight: bold;
   }
 }
