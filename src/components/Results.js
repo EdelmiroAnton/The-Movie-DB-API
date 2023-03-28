@@ -33,13 +33,13 @@ function Results({ addFavs }) {
 
   return (
     <>
-      <h2>
-        Your search: <em>{keyword}</em>
-      </h2>
-      {movieResults.length === 0 && (
-        <h3>Sorry, there are no movies for your search</h3>
-      )}
-      <Container style={{ display: "flex" }}>
+      <Container style={{ display: "block" }}>
+        <h2>
+          Your search: <em>{keyword}</em>
+        </h2>
+        {movieResults.length === 0 && (
+          <h3>Sorry, there are no movies for your search</h3>
+        )}
         <Row>
           {movieResults.map((movie, idx) => (
             <Col key={idx}>
