@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 //Components
 import ButtonMoreInfo from "./ButtonMoreInfo";
@@ -11,6 +12,16 @@ import RemoveFavs from "./RemoveFavs";
 import "../styles/favorites.css";
 
 function Favorites({ favorites, setFavorites }) {
+  const navigate = useNavigate();
+
+   // If the token is not in the sessionStorage, the site will redirect to the path "/"
+   useEffect(() => {
+    const token = sessionStorage.getItem("token");
+    if (!token) {
+      navigate("/");
+    }
+  }, [navigate]);
+
   useEffect(() => {
     const favsItems = localStorage.getItem("favs");
     if (favsItems !== null) {
