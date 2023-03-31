@@ -34,7 +34,7 @@ function Login() {
     swal(<h1>Welcome to the site!</h1>);
 
     //Post email and password with Axios
-    const URL = "http://challenge-react.alkemy.org/";
+    const URL = "//challenge-react.alkemy.org/";
     axios.post(URL, { email, password }).then((resp) => {
       const token = resp.data.token;
       sessionStorage.setItem("token", token);
