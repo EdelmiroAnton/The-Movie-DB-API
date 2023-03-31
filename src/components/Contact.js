@@ -19,6 +19,10 @@ function Contact() {
     }
   }, [navigate]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <h1>CONTACT</h1>
@@ -49,7 +53,9 @@ function Contact() {
             placeholder="Enter your telephone number"
           />
         </Form.Group>
-        <Button type="submit">Submit</Button>
+        <Button type="submit" onClick={handleSubmit}>
+          Submit
+        </Button>
       </Form>
     </>
   );
