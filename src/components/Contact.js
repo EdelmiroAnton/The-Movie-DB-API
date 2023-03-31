@@ -31,27 +31,25 @@ function Contact() {
           {/* label */}
           <Form.Label>Name</Form.Label>
           {/* input  */}
-          <Form.Control
-            type="Name"
-            placeholder="Enter your name and last name"
-          />
+          <Form.Control type="Name" placeholder="John Doe" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="form_email">
           {/* label */}
           <Form.Label>Email address</Form.Label>
           {/* input  */}
-          <Form.Control type="email" placeholder="Enter your email" />
+          <Form.Control
+            type="email"
+            placeholder="John_doe@example.com"
+            req="true"
+          />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="form_phone">
           {/* label */}
           <Form.Label>Phone number</Form.Label>
           {/* input  */}
-          <Form.Control
-            type="number"
-            placeholder="Enter your telephone number"
-          />
+          <Form.Control type="number" placeholder="54-2324-697691" />
         </Form.Group>
         <Button type="submit" onClick={handleSubmit}>
           Submit
