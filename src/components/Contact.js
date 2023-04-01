@@ -59,6 +59,11 @@ function Contact() {
           {/* input  */}
           <Form.Control type="number" placeholder="54-2324-697691" />
         </Form.Group>
+        <input
+          type="hidden"
+          name="_autoresponse"
+          value="Hey!👋 Thanks for fill the form, we've received your data correctly. Greetings! 😊"
+        ></input>
         <Button type="submit" onClick={handleSubmit}>
           Submit
         </Button>
