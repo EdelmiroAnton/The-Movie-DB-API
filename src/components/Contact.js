@@ -20,33 +20,35 @@ function Contact() {
   }, [navigate]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
+    console.log("lalala")
   };
 
   return (
     <>
       <h1>CONTACT</h1>
-      <Form>
-        <Form.Group className="mb-3" controlId="form_name">
-          {/* label */}
-          <Form.Label>Name</Form.Label>
+      <Form
+        action="https://formsubmit.co/anton.edelmiro@gmail.com"
+        method="POST"
+      >
+        <Form.Group className="mb-3">
+          <Form.Label >Name</Form.Label>
           {/* input  */}
-          <Form.Control type="Name" placeholder="John Doe" />
+          <Form.Control type="text" name="name"  placeholder="John Doe" />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="form_email">
-          {/* label */}
+        <Form.Group className="mb-3">
           <Form.Label>Email address</Form.Label>
           {/* input  */}
           <Form.Control
             type="email"
+            name="email"
             placeholder="John_doe@example.com"
             req="true"
           />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="form_phone">
-          {/* label */}
           <Form.Label>Phone number</Form.Label>
           {/* input  */}
           <Form.Control type="number" placeholder="54-2324-697691" />
