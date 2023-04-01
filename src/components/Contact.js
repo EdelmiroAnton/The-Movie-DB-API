@@ -30,6 +30,7 @@ function Contact() {
       <Form
         action="https://formsubmit.co/anton.edelmiro@gmail.com"
         method="POST"
+        className="formContainer"
       >
         <Form.Group className="mb-3">
           <Form.Label for="name">Name</Form.Label>
@@ -59,6 +60,12 @@ function Contact() {
           {/* input  */}
           <Form.Control type="number" placeholder="54-2324-697691" />
         </Form.Group>
+        <Form.Label>Leave us a message </Form.Label>
+
+        <Form.Control
+          as="textarea"
+          placeholder="Leave a message or suggest us a movie to be uploaded"
+        ></Form.Control>
         <input
           type="hidden"
           name="_autoresponse"
