@@ -21,7 +21,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     // e.preventDefault();
-    console.log("lalala")
+    console.log("lalala");
   };
 
   return (
@@ -32,9 +32,14 @@ function Contact() {
         method="POST"
       >
         <Form.Group className="mb-3">
-          <Form.Label >Name</Form.Label>
+          <Form.Label for="name">Name</Form.Label>
           {/* input  */}
-          <Form.Control type="text" name="name"  placeholder="John Doe" />
+          <Form.Control
+            type="text"
+            name="name"
+            id="name"
+            placeholder="John Doe"
+          />
         </Form.Group>
 
         <Form.Group className="mb-3">
