@@ -43,11 +43,12 @@ function Contact() {
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label for="email">Email address</Form.Label>
           {/* input  */}
           <Form.Control
             type="email"
             name="email"
+            id="email"
             placeholder="John_doe@example.com"
             req="true"
           />
