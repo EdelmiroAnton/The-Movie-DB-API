@@ -1,7 +1,7 @@
-.title_contact{
-    text-align: center;
-    margin-top: 25px;
-    font-weight: bold;
+.title_contact {
+  text-align: center;
+  margin-top: 25px;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
@@ -28,7 +28,13 @@
   .form-label {
     margin-bottom: 0 !important;
   }
-  .textarea{
+  .textarea {
     height: 150px;
+  }
+
+  .button_submit{
+    display: flex !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
