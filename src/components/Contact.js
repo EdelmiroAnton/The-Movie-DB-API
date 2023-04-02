@@ -56,9 +56,9 @@ function Contact() {
         </Form.Group>
 
         <Form.Group className="mb-3 form_group">
-          <Form.Label>Phone number</Form.Label>
+          <Form.Label for="phoneNumber">Phone number</Form.Label>
           {/* input  */}
-          <Form.Control type="number" placeholder="54-2324-697691" />
+          <Form.Control type="number" name="phoneNumberr" id="phoneNumber" placeholder="54-2324-697691" />
         </Form.Group>
 
         <Form.Group className="mb-3 form_group">
