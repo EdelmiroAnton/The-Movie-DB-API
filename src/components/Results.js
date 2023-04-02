@@ -38,7 +38,9 @@ function Results({ addFavs }) {
     <>
       <Container>
         <h2>
-          Your search: <em>{keyword}</em>
+          <strong>
+            Your search: <em>{keyword}</em>
+          </strong>
         </h2>
         {movieResults.length === 0 && (
           <h3>Sorry, there are no movies for your search</h3>
