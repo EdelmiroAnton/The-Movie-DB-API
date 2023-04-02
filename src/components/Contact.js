@@ -1,12 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  Button,
-  // FormControl,
-  Form,
-  // FormLabel,
-  // FormGroup,
-} from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
+
+import "../styles/contact.css";
 
 function Contact() {
   const navigate = useNavigate();
@@ -32,7 +28,7 @@ function Contact() {
         method="POST"
         className="formContainer"
       >
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3 form_group">
           <Form.Label for="name">Name</Form.Label>
           {/* input  */}
           <Form.Control
@@ -43,7 +39,7 @@ function Contact() {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3">
+        <Form.Group className="mb-3 form_group">
           <Form.Label for="email">Email address</Form.Label>
           {/* input  */}
           <Form.Control
@@ -55,23 +51,26 @@ function Contact() {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="form_phone">
+        <Form.Group className="mb-3 form_group">
           <Form.Label>Phone number</Form.Label>
           {/* input  */}
           <Form.Control type="number" placeholder="54-2324-697691" />
         </Form.Group>
-        <Form.Label>Leave us a message </Form.Label>
 
-        <Form.Control
-          as="textarea"
-          placeholder="Leave a message or suggest us a movie to be uploaded"
-        ></Form.Control>
+        <Form.Group className="mb-3 form_group">
+          <Form.Label>Leave us a message </Form.Label>
+          <Form.Control
+            as="textarea"
+            placeholder="Leave a message or suggest us a movie to be uploaded"
+            className="textarea"
+          ></Form.Control>
+        </Form.Group>
         <input
           type="hidden"
           name="_autoresponse"
           value="Hey!👋 Thanks for fill the form, we've received your data correctly. Greetings! 😊"
         ></input>
-        <Button type="submit" onClick={handleSubmit}>
+        <Button type="submit" onClick={handleSubmit} className="button_submit">
           Submit
         </Button>
       </Form>

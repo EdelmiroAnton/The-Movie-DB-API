@@ -1,0 +1,28 @@
+@media screen and (min-width: 768px) {
+  .row {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .formContainer {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
+  .form_group {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .form-label {
+    margin-bottom: 0 !important;
+  }
+  .textarea{
+    height: 150px;
+  }
+}
