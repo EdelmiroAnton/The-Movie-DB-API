@@ -58,15 +58,22 @@ function Contact() {
         <Form.Group className="mb-3 form_group">
           <Form.Label for="phoneNumber">Phone number</Form.Label>
           {/* input  */}
-          <Form.Control type="number" name="phoneNumberr" id="phoneNumber" placeholder="54-2324-697691" />
+          <Form.Control
+            type="number"
+            name="phoneNumber"
+            id="phoneNumber"
+            placeholder="54-2324-697691"
+          />
         </Form.Group>
 
         <Form.Group className="mb-3 form_group">
-          <Form.Label>Leave us a message </Form.Label>
+          <Form.Label for="textarea">Leave us a message </Form.Label>
           <Form.Control
             as="textarea"
             placeholder="Leave a message or suggest us a movie to be uploaded"
             className="textarea"
+            id="textarea"
+            name="textarea"
           ></Form.Control>
         </Form.Group>
         <input
