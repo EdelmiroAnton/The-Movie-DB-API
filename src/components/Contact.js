@@ -31,11 +31,16 @@ function Contact() {
         <Form.Group className="mb-3 form_group">
           <Form.Label for="name">Name</Form.Label>
           {/* input  */}
+          <Form.Control type="text" name="name" id="name" placeholder="John" />
+        </Form.Group>
+        <Form.Group className="mb-3 form_group">
+          <Form.Label for="lastName">Last Name</Form.Label>
+          {/* input  */}
           <Form.Control
             type="text"
-            name="name"
-            id="name"
-            placeholder="John Doe"
+            name="lastName"
+            id="lastName"
+            placeholder="Doe"
           />
         </Form.Group>
 
@@ -47,7 +52,6 @@ function Contact() {
             name="email"
             id="email"
             placeholder="John_doe@example.com"
-            req="true"
           />
         </Form.Group>
 
