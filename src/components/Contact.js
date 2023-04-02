@@ -22,7 +22,7 @@ function Contact() {
 
   return (
     <>
-      <h1>CONTACT</h1>
+      <h1 className="title_contact">KEEP IN CONTACT</h1>
       <Form
         action="https://formsubmit.co/anton.edelmiro@gmail.com"
         method="POST"
