@@ -13,6 +13,7 @@
 
   .navbar button {
     margin: 8px 0 auto auto;
+    border: none;
   }
 
   .navbar-collapse {
@@ -63,15 +64,22 @@
 
   .navbar button {
     margin: 8px auto auto auto;
+    border: none;
   }
+
   .navbar-collapse {
     display: block;
     text-align: center;
     text-decoration: none;
   }
+
   .navbar-collapse ul li {
     padding: 0px;
     margin: 10px 0px 0px 0px;
+  }
+
+  .navbar-toggler.collapsed {
+    margin-left: 45px !important;
   }
 
   .navbar-toggler:hover {
