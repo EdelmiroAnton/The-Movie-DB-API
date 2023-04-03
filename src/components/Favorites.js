@@ -14,8 +14,8 @@ import "../styles/favorites.css";
 function Favorites({ favorites, setFavorites }) {
   const navigate = useNavigate();
 
-   // If the token is not in the sessionStorage, the site will redirect to the path "/"
-   useEffect(() => {
+  // If the token is not in the sessionStorage, the site will redirect to the path "/"
+  useEffect(() => {
     const token = sessionStorage.getItem("token");
     if (!token) {
       navigate("/");
@@ -40,12 +40,12 @@ function Favorites({ favorites, setFavorites }) {
   return (
     <>
       {favorites.length === 0 && (
-        <>
+        <div className="container_textEmptyFavs">
           <h1 className="textEmptyFavs">📽️ Ups, your Fav List is empty 📽️</h1>
           <Link to={"/movies"} className="goBackLink">
             Go back
           </Link>
-        </>
+        </div>
       )}
       <Container style={{ display: "flex" }}>
         <Row>

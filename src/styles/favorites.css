@@ -1,7 +1,15 @@
+.container_textEmptyFavs {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .textEmptyFavs {
   text-align: center;
   font-weight: bold;
   color: #5f5c5c;
+  line-height: 2;
 }
 
 .goBackLink {
