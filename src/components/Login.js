@@ -58,7 +58,8 @@ function Login() {
   return (
     <>
       {token && <Navigate to="/movies" />}
-      <GoogleOAuthProvider clientId="882638153135-4k0p8tbg8b0mfn840aji96cq9fbed0qi.apps.googleusercontent.com">
+      <GoogleOAuthProvider clientId="12366388808-nnci310k7b0k3hfje3so2ivpejtkma1s.apps.googleusercontent.com">
+        
         <GoogleLogin
           onSuccess={(credentialResponse) => {
             var decoded = jwt_decode(credentialResponse.credential);
