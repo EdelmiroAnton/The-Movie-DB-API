@@ -5,13 +5,13 @@ import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import jwt_decode from "jwt-decode";
 
 // import axios from "axios";
-// import swal from "@sweetalert/with-react";
+// import { Button, FormControl } from "react-bootstrap";
 
 import { useNavigate, Navigate } from "react-router-dom";
-// import { Button, FormControl } from "react-bootstrap";
 import { useState } from "react";
-import "../styles/login.css";
+
 import swal from "@sweetalert/with-react";
+import "../styles/login.css";
 
 function Login() {
   const [token, setToken] = useState("");
@@ -59,24 +59,26 @@ function Login() {
     <>
       {token && <Navigate to="/movies" />}
       <GoogleOAuthProvider clientId="12366388808-nnci310k7b0k3hfje3so2ivpejtkma1s.apps.googleusercontent.com">
-        
-        <GoogleLogin
-          onSuccess={(credentialResponse) => {
-            var decoded = jwt_decode(credentialResponse.credential);
-            console.log(decoded.jti);
-            swal({
-              title: "Welcome!",
-              text: "Login Success",
-              icon: "success",
-            });
-            setToken(decoded.jti);
-          }}
-          onError={() => {
-            swal("Login Failed");
-          }}
-        />
+        <div className="loginContainer">
+          <h4 className="login_title">Log in with Google</h4>
+          <GoogleLogin
+            className="googleBtn"
+            onSuccess={(credentialResponse) => {
+              var decoded = jwt_decode(credentialResponse.credential);
+              console.log(decoded.jti);
+              swal({
+                title: "Welcome!",
+                text: "Login Success",
+                icon: "success",
+              });
+              setToken(decoded.jti);
+            }}
+            onError={() => {
+              swal("Login Failed");
+            }}
+          />
+        </div>
       </GoogleOAuthProvider>
-
       {/* <form onSubmit={handleSubmit}>
         <div className="container_input">
           <label className="input_email">

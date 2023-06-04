@@ -10,6 +10,11 @@
   justify-content: center;
 }
 
+.footer h3 {
+  margin-top: 15px;
+  text-align: center;
+}
+
 .githubLink {
   text-decoration: none;
   color: #fff;

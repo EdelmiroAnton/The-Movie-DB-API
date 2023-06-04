@@ -1,4 +1,5 @@
-@media screen and (min-width: 600px) {
+/* Login without Google */
+/* @media screen and (min-width: 600px) {
   .container_input {
     margin: 20px auto 0 auto;
     display: flex;
@@ -31,9 +32,9 @@
   .button_logIn:hover {
     font-weight: bold;
   }
-}
+} */
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .container_input {
     display: block;
     max-width: 350px;
@@ -71,5 +72,68 @@
 
   .button_logIn:hover {
     font-weight: bold;
+  }
+} */
+
+/* Google Login */
+@media (width <= 425px) {
+  .loginContainer {
+    max-width: 300px;
+    width: auto;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 5px grey;
+    background-color: whitesmoke;
+  }
+
+  .login_title {
+    text-align: center;
+    position: relative;
+    top: 25px;
+    font-weight: bolder;
+  }
+  /* Google btn */
+  .S9gUrf-YoZ4jf {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px !important;
+    border: none;
+  }
+}
+
+@media (width > 425px) {
+  .loginContainer {
+    max-width: 300px;
+    width: auto;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 5px grey;
+    background-color: whitesmoke;
+  }
+
+  .login_title {
+    text-align: center;
+    position: relative;
+    top: 25px;
+    font-weight: bolder;
+  }
+  /* Google btn */
+  .S9gUrf-YoZ4jf {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px !important;
+    border: none;
   }
 }

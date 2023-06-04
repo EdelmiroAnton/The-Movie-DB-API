@@ -1,118 +1,265 @@
-.container_row {
-  display: flex;
-  justify-content: center;
+@media (width >= 768px) {
+  .container_row {
+    position: relative;
+    top: 45px;
+    left: 0;
+  }
+
+  /* Poster */
+  .container_poster {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin-bottom: 25px;
+  }
+
+  .poster {
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px 5px grey;
+  }
+
+  /* Text and info */
+  .container_movieDetails {
+    max-width: 650px;
+    /* position: absolute; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .movie_title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+
+  .movie_overview {
+    text-align: justify;
+    font-size: 1.5rem;
+    margin-right: 15px;
+  }
+  .container_genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title_genre {
+    font-weight: bolder;
+    color: rgb(110, 109, 109);
+    margin: 0;
+  }
+
+  .list_genres {
+    word-break: break-all;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .genre {
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+
+  .genre_text {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  .container_popularity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .title_popularity {
+    font-weight: bolder;
+
+    color: rgb(110, 109, 109);
+    margin: 0;
+  }
+
+  .popularity_container {
+    border: 3px solid rgb(191, 210, 245);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  .popularity_percentage {
+    margin-left: 3px;
+    margin-top: 7px;
+  }
+
+  .container_language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .title_language {
+    font-weight: bolder;
+
+    color: rgb(110, 109, 109);
+    margin: 0;
+  }
+
+  .flagLanguage {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-flags svg {
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+  }
 }
 
-/* Poster */
-.container_poster {
-  display: flex;
-  justify-content: center;
-  max-width: 500px;
-}
+@media (width < 768px) {
+  .container_row {
+    position: relative;
+    top: 45px;
+    left: 0;
+  }
 
-.poster {
-  height: 500px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 12px 5px grey;
-}
-/* Text and info */
-.container_movieDetails {
-  max-width: 650px;
-}
+  /* Poster */
+  .container_poster {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin-bottom: 25px;
+  }
 
-.movie_title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bolder;
-}
+  .poster {
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px 5px grey;
+  }
 
-.movie_overview {
-  text-align: center;
-  font-size: 1.5rem;
-}
-.container_genres {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
+  /* Text and info */
+  .container_movieDetails {
+    max-width: 650px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
 
-.title_genre {
-  font-weight: bolder;
-  color: rgb(110, 109, 109);
-  margin: 0;
-}
+  .movie_title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
 
-.list_genres {
-  word-break:break-all;
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 1.2rem;
-}
+  .movie_overview {
+    text-align: justify;
+    font-size: 1.5rem;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
 
-.genre {
-  margin-right: 5px;
-  margin-left: 10px;
-}
+  .container_genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 
-.genre_text {
-  margin-left: 3px;
-  margin-right: 3px;
-}
+  .title_genre {
+    font-weight: bolder;
+    color: rgb(110, 109, 109);
+    margin: 0;
+  }
 
-.container_popularity {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
+  .list_genres {
+    word-break: break-all;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-.title_popularity {
-  font-weight: bolder;
+  .genre {
+    justify-content: space-between;
+    margin-right: 5px;
+    margin-left: 10px;
+  }
 
-  color: rgb(110, 109, 109);
-  margin: 0;
-}
+  .genre_text {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
 
-.popularity_container {
-  border: 3px solid rgb(191, 210, 245);
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
-}
+  .container_popularity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
 
-.popularity_percentage {
-  margin-left: 3px;
-  margin-top: 7px;
-}
+  .title_popularity {
+    font-weight: bolder;
+    color: rgb(110, 109, 109);
+    margin: 0;
+  }
 
-.container_language {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
+  .popularity_container {
+    border: 3px solid rgb(191, 210, 245);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
 
-.title_language {
-  font-weight: bolder;
+  .popularity_percentage {
+    margin-left: 3px;
+    margin-top: 7px;
+  }
 
-  color: rgb(110, 109, 109);
-  margin: 0;
-}
+  .container_language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
 
+  .title_language {
+    font-weight: bolder;
 
-.flagLanguage {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+    color: rgb(110, 109, 109);
+    margin: 0;
+  }
 
-.menu-flags svg{
-  margin-left: 10px;
-  width: 25px;
-  height: 25px;
+  .flagLanguage {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-flags svg {
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+  }
 }
