@@ -14,9 +14,7 @@ function Header({ favorites }) {
           <ul className="navbar_items">
             <li>
               <Link to="/" className="links">
-                Log In
-                <br />
-                Log out
+                Home
               </Link>
             </li>
             <li>

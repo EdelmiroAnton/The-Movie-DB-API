@@ -40,7 +40,7 @@ function ListOfMovies({ addFavs }) {
   let token = sessionStorage.getItem("token");
 
   return (
-    // If the token is not in the sessionStorage, the site will redirect to the path "/"
+    // // If the token is not in the sessionStorage, the site will redirect to the path "/"
     <>
       {!token && <Navigate to="/" />}
 
