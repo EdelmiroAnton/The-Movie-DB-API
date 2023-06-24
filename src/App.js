@@ -58,9 +58,9 @@ function App() {
 
   return (
     <>
-      <Header favorites={favorites} />
+      {/* <Header favorites={favorites} /> */}
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Login favorites={favorites}/>} />
         <Route path="/movies" element={<ListOfMovies addFavs={addFavs} />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/detail" element={<Detail />} />

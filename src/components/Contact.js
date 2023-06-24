@@ -4,6 +4,9 @@ import { Button, Form } from "react-bootstrap";
 
 import "../styles/contact.css";
 
+//Component
+import Header from "./Header";
+
 function Contact() {
   const navigate = useNavigate();
 
@@ -22,6 +25,7 @@ function Contact() {
 
   return (
     <>
+      <Header />
       <h1 className="title_contact">KEEP IN CONTACT</h1>
       <Form
         action="https://formsubmit.co/anton.edelmiro@gmail.com"

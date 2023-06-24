@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 //Components
 import ButtonMoreInfo from "./ButtonMoreInfo";
 import RemoveFavs from "./RemoveFavs";
+import Header from "./Header";
 
 //Styles
 import "../styles/favorites.css";
@@ -39,6 +40,7 @@ function Favorites({ favorites, setFavorites }) {
   };
   return (
     <>
+      <Header />
       {favorites.length === 0 && (
         <div className="container_textEmptyFavs">
           <h1 className="textEmptyFavs">📽️ Ups, your Fav List is empty 📽️</h1>

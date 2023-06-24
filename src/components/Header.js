@@ -5,7 +5,11 @@ import "../styles/header.css";
 //Components
 import Search from "./Search";
 
-function Header({ favorites }) {
+function Header({ favorites, token }) {
+  function logout() {
+    sessionStorage.clear();
+  }
+
   return (
     <header className="header_container">
       <Navbar expand="md">
@@ -13,12 +17,13 @@ function Header({ favorites }) {
         <Navbar.Collapse id="basic-navbar-nav">
           <ul className="navbar_items">
             <li>
-              <Link to="/" className="links">
-                Log In
-                <br />
-                Log out
-              </Link>
+              {!token && (
+                <Link onClick={logout} className="links" to={"/"}>
+                  Log Out
+                </Link>
+              )}
             </li>
+
             <li>
               <Link to="/movies" className="links">
                 Movies
@@ -31,7 +36,7 @@ function Header({ favorites }) {
             </li>
             <li>
               <Link to="/favorites" className="links">
-                Favorites ({favorites.length})
+                Favorites
               </Link>
             </li>
           </ul>

@@ -11,6 +11,7 @@ import FavIcon from "./FavIcon";
 
 //Styles
 import "../styles/listado.css";
+import Header from "./Header";
 
 function ListOfMovies({ addFavs }) {
   const [movieData, setMovieData] = useState([]);
@@ -37,49 +38,54 @@ function ListOfMovies({ addFavs }) {
     }, 100);
   }, []);
 
-  let token = sessionStorage.getItem("token");
+  // let token = sessionStorage.getItem("token");
 
   return (
     // If the token is not in the sessionStorage, the site will redirect to the path "/"
     <>
-      {!token && <Navigate to="/" />}
+      {/* {!token && <Navigate to="/" />} */}
 
       {loading ? (
         <Loader />
       ) : (
-        <Container style={{ display: "flex" }}>
-          <Row>
-            {movieData.map((movie, idx) => (
-              <Col key={idx}>
-                <Card
-                  style={{
-                    width: "18rem",
-                    marginTop: "20px",
-                    boxShadow: "0px 0px 6px",
-                    border: "none",
-                  }}
-                  id="cardContainer"
-                >
-                  <FavIcon id={movie.id} addFavs={addFavs} />
-                  <Card.Img
-                    variant="top"
-                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                  />
-                  <Card.Body style={{ backgroundColor: "#EBE8E7" }}>
-                    <Card.Title>{movie.title}</Card.Title>
-                    <Card.Text>{movie.overview.substring(0, 75)}...</Card.Text>
-                    <Link
-                      to={`/detail?movieID=${movie.id}`}
-                      style={{ textDecoration: "none" }}
-                    >
-                      <ButtonMoreInfo />
-                    </Link>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
+        <>
+          <Header />
+          <Container style={{ display: "flex" }}>
+            <Row>
+              {movieData.map((movie, idx) => (
+                <Col key={idx}>
+                  <Card
+                    style={{
+                      width: "18rem",
+                      marginTop: "20px",
+                      boxShadow: "0px 0px 6px",
+                      border: "none",
+                    }}
+                    id="cardContainer"
+                  >
+                    <FavIcon id={movie.id} addFavs={addFavs} />
+                    <Card.Img
+                      variant="top"
+                      src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                    />
+                    <Card.Body style={{ backgroundColor: "#EBE8E7" }}>
+                      <Card.Title>{movie.title}</Card.Title>
+                      <Card.Text>
+                        {movie.overview.substring(0, 75)}...
+                      </Card.Text>
+                      <Link
+                        to={`/detail?movieID=${movie.id}`}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <ButtonMoreInfo />
+                      </Link>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </>
       )}
     </>
   );

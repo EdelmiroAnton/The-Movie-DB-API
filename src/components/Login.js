@@ -7,15 +7,14 @@ import jwt_decode from "jwt-decode";
 // import axios from "axios";
 // import { Button, FormControl } from "react-bootstrap";
 
-import { useNavigate, Navigate } from "react-router-dom";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import swal from "@sweetalert/with-react";
 import "../styles/login.css";
+import Header from "./Header";
 
-function Login() {
-  const [token, setToken] = useState("");
-  sessionStorage.setItem("token", token);
+function Login({ favorites }) {
+  const navigate = useNavigate();
 
   // const navigate = useNavigate();
   // const handleSubmit = (e) => {
@@ -53,25 +52,27 @@ function Login() {
   //   });
   // };
 
-  // let token = sessionStorage.getItem("token");
-
   return (
     <>
-      {token && <Navigate to="/movies" />}
       <GoogleOAuthProvider clientId="12366388808-nnci310k7b0k3hfje3so2ivpejtkma1s.apps.googleusercontent.com">
         <div className="loginContainer">
-          <h4 className="login_title">Log in with Google</h4>
+          <h1 className="login_title">Log in with Google</h1>
           <GoogleLogin
             className="googleBtn"
             onSuccess={(credentialResponse) => {
-              var decoded = jwt_decode(credentialResponse.credential);
-              console.log(decoded.jti);
+              let decoded = jwt_decode(credentialResponse.credential);
               swal({
                 title: "Welcome!",
                 text: "Login Success",
                 icon: "success",
               });
-              setToken(decoded.jti);
+              //Add token to sessionStorage.
+              sessionStorage.setItem("token", decoded.jti);
+
+              // When user logs in, automatically will be redirected to /movies
+              if (decoded.jti) {
+                navigate("/movies");
+              }
             }}
             onError={() => {
               swal("Login Failed");
@@ -79,6 +80,9 @@ function Login() {
           />
         </div>
       </GoogleOAuthProvider>
+      {sessionStorage.length === 1 && (
+        <Header favorites={favorites} token={sessionStorage.getItem("token")} />
+      )}
       {/* <form onSubmit={handleSubmit}>
         <div className="container_input">
           <label className="input_email">
