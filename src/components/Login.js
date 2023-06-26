@@ -7,12 +7,12 @@ import jwt_decode from "jwt-decode";
 // import axios from "axios";
 // import { Button, FormControl } from "react-bootstrap";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import swal from "@sweetalert/with-react";
 import "../styles/login.css";
 import Header from "./Header";
-
+import tmbd_logo from "../assets/tmdb_logo.jpg";
 function Login({ favorites }) {
   const navigate = useNavigate();
 
@@ -54,6 +54,21 @@ function Login({ favorites }) {
 
   return (
     <>
+      <h2 className="animate__animated animate__bounceIn animate__slow 4s">
+        WELCOME TO MOVIE-LIFY
+      </h2>
+      <div
+        className="subtitle 
+      animate__animated 
+      animate__bounceIn 
+      animate__delay-1s 
+      animate__slow 4s"
+      >
+        <h4>An APP based on </h4>
+        <a href="https://www.themoviedb.org/" target="blank">
+          <img src={tmbd_logo} alt="api-logo" className="apiLogo" />
+        </a>
+      </div>
       <GoogleOAuthProvider clientId="12366388808-nnci310k7b0k3hfje3so2ivpejtkma1s.apps.googleusercontent.com">
         <div className="loginContainer">
           <h1 className="login_title">Log in with Google</h1>

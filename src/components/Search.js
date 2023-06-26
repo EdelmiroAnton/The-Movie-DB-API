@@ -3,6 +3,7 @@ import swal from "@sweetalert/with-react";
 import "../styles/buscador.css";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import Header from "./Header";
 
 function Search() {
   const navigate = useNavigate();
@@ -30,6 +31,7 @@ function Search() {
 
   return (
     <>
+      {/* <Header /> */}
       <Form onSubmit={handleSubmit} className="form mt-3 mb-3">
         <Form.Group>
           <Form.Label className="m-0">
