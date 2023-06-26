@@ -17,14 +17,6 @@ function Header({ favorites, token }) {
         <Navbar.Collapse id="basic-navbar-nav">
           <ul className="navbar_items">
             <li>
-              {!token && (
-                <Link onClick={logout} className="links logout" to={"/"}>
-                  Log Out
-                </Link>
-              )}
-            </li>
-
-            <li>
               <Link to="/movies" className="links">
                 Movies
               </Link>
@@ -38,6 +30,13 @@ function Header({ favorites, token }) {
               <Link to="/favorites" className="links">
                 Favorites
               </Link>
+            </li>
+            <li>
+              {!token && (
+                <Link onClick={logout} className="links logout" to={"/"}>
+                  Log Out
+                </Link>
+              )}
             </li>
           </ul>
         </Navbar.Collapse>
