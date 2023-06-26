@@ -76,7 +76,7 @@
 } */
 
 /* Google Login */
-@media (width <= 425px) {
+@media (width <= 762px) {
   .loginContainer {
     max-width: 300px;
     width: auto;
@@ -97,6 +97,7 @@
     position: relative;
     top: 25px;
     font-weight: bolder;
+    font-size: 25px;
   }
   /* Google btn */
   .S9gUrf-YoZ4jf {
@@ -107,11 +108,11 @@
   }
 }
 
-@media (width > 425px) {
+@media (width >= 762px) {
   .loginContainer {
     max-width: 300px;
     width: auto;
-    height: 150px;
+    height: 200px;
     position: absolute;
     top: 0;
     left: 0;
@@ -128,6 +129,7 @@
     position: relative;
     top: 25px;
     font-weight: bolder;
+    font-size: 35px;
   }
   /* Google btn */
   .S9gUrf-YoZ4jf {
