@@ -18,7 +18,7 @@ function Header({ favorites, token }) {
           <ul className="navbar_items">
             <li>
               {!token && (
-                <Link onClick={logout} className="links" to={"/"}>
+                <Link onClick={logout} className="links logout" to={"/"}>
                   Log Out
                 </Link>
               )}

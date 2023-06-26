@@ -6,7 +6,6 @@ import { useEffect } from "react";
 
 function Search() {
   const navigate = useNavigate();
-  // const token = sessionStorage.getItem("token");
 
   // If the token is not in the sessionStorage, the site will redirect to the path "/"
   useEffect(() => {
