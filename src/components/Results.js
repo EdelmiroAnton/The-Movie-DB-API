@@ -10,6 +10,7 @@ import FavIcon from "./FavIcon";
 
 //Styles
 import "../styles/results.css";
+import Header from "./Header";
 
 function Results({ addFavs }) {
   const [movieResults, setMovieResults] = useState([]);
@@ -36,6 +37,7 @@ function Results({ addFavs }) {
 
   return (
     <>
+      <Header />
       <Container>
         <h2>
           <strong>
