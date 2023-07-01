@@ -45,11 +45,15 @@ function ListOfMovies({ addFavs }) {
     axios.get(url).then((resp) => setMovieGenre(resp.data.genres));
     // setArrayOfGenres(movieData.map((idGenre) => idGenre.genre_ids));
   }, [movieData]);
-  console.log(movieGenre.map((idGenre) => idGenre.name));
+  // console.log(movieGenre.map((idGenre) => idGenre.name));
   // console.log(arrayOfGenres.map(item=>item));
 
   function selectGenre() {
-    console.log("hello");
+    const select = document.getElementById("genre")
+    const option = select.options[select.selectedIndex].value;
+    console.log(option)
+
+    // console.log(movieGenre.map((idGenre) => idGenre.name));
   }
   return (
     // If the token is not in the sessionStorage, the site will redirect to the path "/"
@@ -65,6 +69,7 @@ function ListOfMovies({ addFavs }) {
             <Row>
               Filter by genre:
               <Form.Select
+              id="genre"
                 size="sm"
                 aria-label="Default select example"
                 onChange={selectGenre}
