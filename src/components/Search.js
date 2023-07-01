@@ -3,7 +3,6 @@ import swal from "@sweetalert/with-react";
 import "../styles/buscador.css";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import Header from "./Header";
 
 function Search() {
   const navigate = useNavigate();
