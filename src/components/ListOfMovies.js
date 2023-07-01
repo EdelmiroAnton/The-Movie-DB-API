@@ -17,6 +17,7 @@ function ListOfMovies({ addFavs }) {
   const [movieData, setMovieData] = useState([]);
   const [loading, setLoading] = useState();
   const [movieGenre, setMovieGenre] = useState([]);
+  const [genreSelected, setGenreSelected] = useState();
   const [arrayOfGenres, setArrayOfGenres] = useState([]);
 
   const url =
@@ -49,12 +50,12 @@ function ListOfMovies({ addFavs }) {
   // console.log(arrayOfGenres.map(item=>item));
 
   function selectGenre() {
-    const select = document.getElementById("genre")
-    const option = select.options[select.selectedIndex].value;
-    console.log(option)
-
-    // console.log(movieGenre.map((idGenre) => idGenre.name));
+    const select = document.getElementById("genreSelect");
+    const optionGenreName = select.options[select.selectedIndex].value;
+    const optionGenreId = select.options[select.selectedIndex].id;
+    setGenreSelected(optionGenreId);
   }
+
   return (
     // If the token is not in the sessionStorage, the site will redirect to the path "/"
     <>
@@ -69,9 +70,9 @@ function ListOfMovies({ addFavs }) {
             <Row>
               Filter by genre:
               <Form.Select
-              id="genre"
+                id="genreSelect"
                 size="sm"
-                aria-label="Default select example"
+                // aria-label="Default select example"
                 onChange={selectGenre}
               >
                 <option>Click to select the genre</option>
