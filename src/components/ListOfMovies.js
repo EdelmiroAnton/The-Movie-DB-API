@@ -16,6 +16,7 @@ import Header from "./Header";
 function ListOfMovies({ addFavs }) {
   const [movieData, setMovieData] = useState([]);
   const [loading, setLoading] = useState();
+  const [movieGenre, setMovieGenre] = useState([]);
 
   const url =
     "https://api.themoviedb.org/3/discover/movie?api_key=8e6c26173742a6f1dd7865c6f7ccf11d&language=es-ES&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
@@ -38,7 +39,11 @@ function ListOfMovies({ addFavs }) {
     }, 100);
   }, []);
 
-  // let token = sessionStorage.getItem("token");
+  useEffect(() => {
+    const url = `https://api.themoviedb.org/3/genre/movie/list?api_key=8e6c26173742a6f1dd7865c6f7ccf11d`;
+    axios.get(url).then((resp) => setMovieGenre(resp.data.genres));
+  }, []);
+  console.log(movieGenre.map((idGenre) => idGenre.id));
 
   return (
     // If the token is not in the sessionStorage, the site will redirect to the path "/"
