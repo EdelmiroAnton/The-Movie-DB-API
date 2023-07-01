@@ -1,6 +1,6 @@
 import { Link, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Card, Container, Row, Col, Form } from "react-bootstrap";
 import swal from "@sweetalert/with-react";
 import axios from "axios";
 
@@ -17,6 +17,7 @@ function ListOfMovies({ addFavs }) {
   const [movieData, setMovieData] = useState([]);
   const [loading, setLoading] = useState();
   const [movieGenre, setMovieGenre] = useState([]);
+  const [arrayOfGenres, setArrayOfGenres] = useState([]);
 
   const url =
     "https://api.themoviedb.org/3/discover/movie?api_key=8e6c26173742a6f1dd7865c6f7ccf11d&language=es-ES&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
@@ -42,9 +43,14 @@ function ListOfMovies({ addFavs }) {
   useEffect(() => {
     const url = `https://api.themoviedb.org/3/genre/movie/list?api_key=8e6c26173742a6f1dd7865c6f7ccf11d`;
     axios.get(url).then((resp) => setMovieGenre(resp.data.genres));
-  }, []);
-  console.log(movieGenre.map((idGenre) => idGenre.id));
+    // setArrayOfGenres(movieData.map((idGenre) => idGenre.genre_ids));
+  }, [movieData]);
+  console.log(movieGenre.map((idGenre) => idGenre.name));
+  // console.log(arrayOfGenres.map(item=>item));
 
+  function selectGenre() {
+    console.log("hello");
+  }
   return (
     // If the token is not in the sessionStorage, the site will redirect to the path "/"
     <>
@@ -56,6 +62,21 @@ function ListOfMovies({ addFavs }) {
         <>
           <Header />
           <Container style={{ display: "flex" }}>
+            <Row>
+              Filter by genre:
+              <Form.Select
+                size="sm"
+                aria-label="Default select example"
+                onChange={selectGenre}
+              >
+                <option>Click to select the genre</option>
+                {movieGenre.map((idGenre) => (
+                  <option value={idGenre.name} id={idGenre.id}>
+                    {idGenre.name}
+                  </option>
+                ))}
+              </Form.Select>
+            </Row>
             <Row>
               {movieData.map((movie, idx) => (
                 <Col key={idx}>
