@@ -1,4 +1,4 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Card, Container, Row, Col, Form } from "react-bootstrap";
 import swal from "@sweetalert/with-react";
@@ -46,14 +46,14 @@ function ListOfMovies({ addFavs }) {
     axios.get(url).then((resp) => setMovieGenre(resp.data.genres));
     // setArrayOfGenres(movieData.map((idGenre) => idGenre.genre_ids));
   }, [movieData]);
-  // console.log(movieGenre.map((idGenre) => idGenre.name));
-  // console.log(arrayOfGenres.map(item=>item));
 
   function selectGenre() {
     const select = document.getElementById("genreSelect");
     const optionGenreName = select.options[select.selectedIndex].value;
     const optionGenreId = select.options[select.selectedIndex].id;
     setGenreSelected(optionGenreId);
+    const ids = movieData.map((el) => el.genre_ids);
+    console.log(movieData);
   }
 
   return (
@@ -76,8 +76,8 @@ function ListOfMovies({ addFavs }) {
                 onChange={selectGenre}
               >
                 <option>Click to select the genre</option>
-                {movieGenre.map((idGenre) => (
-                  <option value={idGenre.name} id={idGenre.id}>
+                {movieGenre.map((idGenre, idx) => (
+                  <option key={idx} value={idGenre.name} id={idGenre.id}>
                     {idGenre.name}
                   </option>
                 ))}
